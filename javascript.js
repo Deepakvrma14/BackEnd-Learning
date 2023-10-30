@@ -48,3 +48,34 @@ console.log("------------------");
 
 const {name: myvar} =  band;
 console.log(myvar);
+
+// Classses 
+
+class pizza{
+    constructor(abc){
+        this.type = abc;
+        this.size  = "medium";
+        this.crust = "thin";
+
+    }
+    bake(){
+        console.log(`baking a ${this.size} pizza of ${this.crust} of ${this.type}`);
+
+    }
+}
+
+const mypizza = new pizza("veg");
+mypizza.bake();
+
+console.log("-----------");
+
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+  }
+  
+Person.prototype.nationality = "English";
+
+console.log(Person.prototype);
