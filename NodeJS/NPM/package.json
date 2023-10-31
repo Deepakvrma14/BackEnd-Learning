@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "date-fns": "^2.30.0",
-    "uui": "^1.0.7"
+    "uui": "^1.0.7",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
