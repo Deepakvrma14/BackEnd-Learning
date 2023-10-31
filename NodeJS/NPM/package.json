@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Deepak",
   "license": "ISC",
   "dependencies": {
-    "date-fns": "^2.30.0"
+    "date-fns": "^2.30.0",
+    "uui": "^1.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
