@@ -13,6 +13,9 @@ console.log('last line of code');
 
 
 
+
+
+
 fs.writeFile(path.join(__dirname, 'files', 'ans.txt'), 'demo content abc',(err)=>{
     if(err) throw err;
     console.log('write done');
