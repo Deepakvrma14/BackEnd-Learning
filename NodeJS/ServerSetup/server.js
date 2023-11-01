@@ -21,11 +21,16 @@ const serveFile = async (filePath, contentType, response) => {
             filePath,
             !contentType.includes('image')? 'utf8' : ''
         );   
-const data = contentType === 'application/json' 
-    ? JSON.parse(rawData) : rawData;
+        const data = contentType === 'application/json' 
+            ? JSON.parse(rawData) : rawData;
 
-response.writeHead(200, {'Content-Type': contentType === 'application/json' 
-? 'text/plain' : contentType});
+            response.writeHead(
+                // 200,
+                filePath.includes('404.html') ? 404 : 200, 
+                
+                {'Content-Type': contentType === 'application/json' 
+            ? 'text/plain' : contentType
+        });
 
 response.end(
     contentType === 'application/json'
@@ -69,6 +74,9 @@ const server = http.createServer((req, res) =>{
             break;
         case '.png':
             contentType = 'image/png';
+            break;
+        case '.jpg':
+            contentType = 'image/jpg';
             break;
         default:
             contentType = 'text/plain';
