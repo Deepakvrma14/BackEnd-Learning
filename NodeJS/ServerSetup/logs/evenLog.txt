@@ -1,3 +1,0 @@
-2023-11-01	 10:02:13	 0eff8af3-3a67-4e5e-b050-78e514bf045e	 This is a message of emitted event 
-2023-11-01	 10:03:20	 9dcffa51-cb19-4a93-abd6-4551ed3717e7	 This is a message of emitted event 
-2023-11-01	 10:03:23	 8c586bc9-4326-42fb-a37f-e1ad51372a75	 This is a message of emitted event 
