@@ -7,8 +7,9 @@ const logEvents = require('./logEvents');
 
 const eventEmitter = require('events');
 class MyEmitter extends eventEmitter {};
-
 const myEmitter = new MyEmitter();
+
+myEmitter.on('Log', (msg, fileName) => logEvents(msg, fileName));
 
 const serveFile = async (filePath, contentType, response) => {
     try{
@@ -38,7 +39,9 @@ response.end(
         : data
 );
     } catch (err) {
+
         console.log(err);
+        myEmitter.emit('Log', `${err.name}\t ${err.message} `, 'errLog.txt');
         response.statusCode = 500;
         response.end();
     }
@@ -47,7 +50,9 @@ response.end(
 const PORT = process.env.PORT || 3500;
 
 const server = http.createServer((req, res) =>{
+
     console.log(req.url, req.method);
+    myEmitter.emit('Log', `URL: ${req.url} \t Method: ${req.method}`, 'reqLog.txt');
 
     if (req.url === '/') {
         serveFile(path.join(__dirname, 'views', 'index.html'), 'text/html', res);
@@ -151,6 +156,6 @@ const server = http.createServer((req, res) =>{
 });
 
 server.listen(PORT, () => console.log(`listening on PORT ${PORT}`));
-// myEmitter.on('Log', (msg) => logEvents(msg));
+
 
 
