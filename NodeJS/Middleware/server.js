@@ -5,6 +5,20 @@ const path  = require('path');
 
 const PORT = process.env.PORT || 3500;
 
+// build in middleware
+// handle url; encoded data or forms data 
+
+app.use(express.urlencoded({extended: false}));
+
+
+app.use(express.json());
+
+app.use(express.static(path.join(__dirname, '/public'))); // static files
+
+
+
+
+
 app.get(('^/$|index(.html)?'), (req, res) => { // ^/|index(.html)? means that the url can be / or /index.html or /index
     // res.send('Hello World');
     res.sendFile(path.join(__dirname, 'views', 'index.html')); 
