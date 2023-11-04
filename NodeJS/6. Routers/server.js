@@ -48,46 +48,13 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'views'))); // static files
 
+app.use('/subdir',express.static(path.join(__dirname, 'views'))); // static files for the subdir 
 
 
+app.use('subdir', require('./routes/subdir'));
 
-
-app.get(('^/$|index(.html)?'), (req, res) => { // ^/|index(.html)? means that the url can be / or /index.html or /index
-    // res.send('Hello World');
-    res.sendFile(path.join(__dirname, 'views', 'index.html')); 
-});
-app.get('/new-page(.html)?', (req, res) => {
-    // res.send('Hello World');
-    res.sendFile(path.join(__dirname, 'views', 'new-page.html')); 
-});
-app.get('/old-page(.html)?', (req, res) => {
-    // res.send('Hello World');
-    res.redirect(301, 'new-page.html'); 
-
-});
-
-// route handeler
-app.get('/hello(.html)?', (req, res, next) => {
-    console.log('hello');
-    next();
-
-}, (req, res) => {
-    res.send('Hello World');
-});
-
-const one = (req, res, next) => {
-    console.log('one');
-    next();
-}
-const two = (req, res, next) => {
-    console.log('two');
-    next();
-}
-const three = (req, res) =>{
-    res.send('finished');
-    console.log('three');
-}
-app.get('/chain(.html)?', [one, two, three]);
+app.use('/', require('./routes/root'));
+app.use('/employees', require('./routes/api/employees'));
 
 // app.all for routing and accepts regex and app.use for middleware which doesnt accept regex
 
@@ -103,12 +70,7 @@ app.all('*', (req, res) => {
     }
     
 });
-
 app.use(errorHandeler)
-
-
-
-
 app.listen(PORT, () => console.log(`listening on PORT ${PORT}`));
 
 
