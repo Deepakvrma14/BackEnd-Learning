@@ -3,8 +3,8 @@ const express  = require('express');
 const app = express();
 const path  = require('path');
 
-const {logger} = require('./middleware/logEvent');
-const { errorHandeler } = require('./middleware/errorHandeler');
+const {logger} = require('./middleware/logEvents');
+const errorHandeler = require('./middleware/errorHandeler');
 
 const PORT = process.env.PORT || 3500;
 const cors = require('cors');
@@ -26,7 +26,7 @@ app.use(cors());
 
 const corsOptions = {
     origin : (origin, callback) => {
-        if(whiteList.indexOf(origin) !== -1 || !origin){
+        if(whiteList.indexOf(origin) !== -1 || !origin ){
             callback(null, true); // no error and allot it
 
         }
@@ -94,7 +94,7 @@ app.get('/*', (req, res) => {
     res.status(404).sendFile(path.join(__dirname, 'views', '404.html')); 
 });
 
-
+app.use(errorHandeler)
 
 
 
