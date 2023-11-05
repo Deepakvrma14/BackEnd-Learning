@@ -1,39 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const path =    require('path');
-const data ={};
+// const employeesControllers = require('../../controllers/employeesControllers');
+const { getEmployee, createNewEmployee, getAllEmployees, updateEmployee, deleteEmployee } = require('../../../7. MVC Rest API/controllers/employeesControllers');
 
 data.employees = require('../../data/employees.json');
 
 router.route('/')
-    .get((req, res) => {
-        res.json(data.employees);
-    })
-    .post((req, res) => {
-       res.json({
-        "firstName": req.body.firstName,
-         "lastName": req.body.lastName
-       });
+    .get(getAllEmployees)
+    .post(createNewEmployee)
 
-    })
-    .put((req, res) => {
-        res.json({
-         "firstName": req.body.firstName,
-          "lastName": req.body.lastName
-        });
- 
-     })
+
+    .put(updateEmployee)
      
-    .delete((req, res) => {
-        res.json({
-            "id": req.body.id,
-        })
-    });
+    .delete(deleteEmployee);
 
 router.route('/:id') //get req hvaing a variable as a parimeter of get request
-    .get((req, res) => {
-        res.json({
-            "id": req.params.id,
-        })
-    });
+    .get(getEmployee);
 module.exports = router;
