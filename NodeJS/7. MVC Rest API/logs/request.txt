@@ -202,3 +202,15 @@
 2023-11-05	 11:51:48	 6cb21c98-cfcd-4956-87c1-666a383a7464	 POST	 undefined	 /employees	 /employees
 2023-11-05	 11:53:04	 d03f1ecc-7bf2-48dd-b464-1b110873d751	 GET	 undefined	 /employees	 /employees
 2023-11-05	 11:54:24	 e363c003-77a7-4c50-a00e-bc4157993811	 GET	 undefined	 /employees/3	 /employees/3
+2023-11-06	 01:17:54	 a886ed66-f659-4373-9847-41c091993076	 GET	 undefined	 /	 /
+2023-11-06	 01:17:54	 77dee32d-97e3-434e-ab3f-00fc1db08fb9	 GET	 undefined	 /styles.css	 /styles.css
+2023-11-06	 01:17:54	 a9237bfb-3464-4386-a4cc-a8823da4b572	 GET	 undefined	 /favicon.ico	 /favicon.ico
+2023-11-06	 01:19:05	 6625539a-ce09-4efd-9605-8f7948da2014	 GET	 undefined	 /employees	 /employees
+2023-11-06	 01:19:24	 460a0451-1ad0-4afd-a8e8-9db31f78f1bf	 POST	 undefined	 /employees	 /employees
+2023-11-06	 01:19:33	 40a9cee2-8b41-4ac3-a1c6-cf641cd90075	 GET	 undefined	 /employees	 /employees
+2023-11-06	 01:19:42	 f287c24d-f257-4d49-8f49-3c526c365bec	 GET	 undefined	 /employees/3	 /employees/3
+2023-11-06	 01:21:07	 53b0df12-fbb7-4f80-93ac-5b39a9de5d2f	 PUT	 undefined	 /employees	 /employees
+2023-11-06	 01:21:20	 32cd30f7-009d-4358-b6e3-8f5ff98fe7c3	 GET	 undefined	 /employees	 /employees
+2023-11-06	 01:22:04	 ebaba42c-b7cd-4a6c-a4ac-c81d34110f83	 DELETE	 undefined	 /employees	 /employees
+2023-11-06	 01:22:14	 a637adb8-4fe5-4ea7-84ae-2187d158f259	 GET	 undefined	 /employees	 /employees
+2023-11-06	 01:22:15	 642afef0-7a46-4ffc-9e8c-45ec6ab8adfa	 GET	 undefined	 /employees	 /employees

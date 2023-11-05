@@ -4,6 +4,7 @@ const path =    require('path');
 // const employeesControllers = require('../../controllers/employeesControllers');
 const { getEmployee, createNewEmployee, getAllEmployees, updateEmployee, deleteEmployee } = require('../../../7. MVC Rest API/controllers/employeesControllers');
 
+const data = {};
 data.employees = require('../../data/employees.json');
 
 router.route('/')
