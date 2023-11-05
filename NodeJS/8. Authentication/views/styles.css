@@ -1,0 +1,11 @@
+/* styling the whole poage as black and giving the h1 heading colour of black and putting it at center of page */
+body {
+    background-color: black;
+}
+
+h1 {
+    color: hwb(0 100% 0%);
+    text-align: center;
+
+}
+
