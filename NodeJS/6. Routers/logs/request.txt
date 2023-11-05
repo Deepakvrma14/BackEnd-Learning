@@ -198,3 +198,7 @@
 2023-11-04	 21:35:29	 20ef6d2f-1b9e-45db-a80c-6baedb218217	 GET	 undefined	 /new-page.html	 /new-page.html
 2023-11-04	 21:35:29	 1f8b4cac-d844-4654-984e-06cba7c7fc85	 GET	 undefined	 /styles.css	 /styles.css
 2023-11-04	 21:35:29	 8ac392c2-33b7-46ff-9b0d-81d5c7b076f6	 GET	 undefined	 /1.jpg	 /1.jpg
+2023-11-05	 11:49:27	 de6faf75-2e88-45e0-86ed-bc9d965e390d	 GET	 undefined	 /employees	 /employees
+2023-11-05	 11:51:48	 6cb21c98-cfcd-4956-87c1-666a383a7464	 POST	 undefined	 /employees	 /employees
+2023-11-05	 11:53:04	 d03f1ecc-7bf2-48dd-b464-1b110873d751	 GET	 undefined	 /employees	 /employees
+2023-11-05	 11:54:24	 e363c003-77a7-4c50-a00e-bc4157993811	 GET	 undefined	 /employees/3	 /employees/3
