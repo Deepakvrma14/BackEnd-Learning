@@ -26,7 +26,9 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'views'))); 
 // routes
 app.use('/', require('./routes/root'));
+
 app.use('/register', require('./routes/api/register'));
+app.use('/auth', require('./routes/api/auth'));
 app.use('/employees', require('./routes/api/employees'));
 
 // app.all for routing and accepts regex and app.use for middleware which doesnt accept regex
