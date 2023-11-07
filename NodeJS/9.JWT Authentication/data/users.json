@@ -1,0 +1,11 @@
+[
+  {
+    "username": "Deepak2",
+    "password": "$2b$10$nUwCw7mC2voaUXL9sMLm9OxIBSh89ZKuDx3Z/F0U9jYQWshPfsyee"
+  },
+  {
+    "username": "Deepak",
+    "password": "$2b$10$ghvZ60gDBtIlpU.9OLPe1OaHEZiheEsknwPXpih1dJOArFfjw9m5.",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRlZXBhayIsImlhdCI6MTY5OTM1MjAxNywiZXhwIjoxNjk5NDM4NDE3fQ.2oeQc5FQohKN_ZDwKTKp8gHGazk3XUSl054MHH3qDDU"
+  }
+]
