@@ -1,5 +1,0 @@
-2023-11-02	 00:19:49	 801ded3a-6b45-4804-9445-ba340c4c964a	 URL: / 	 Method: GET
-2023-11-02	 00:20:36	 cb6c9686-a3a0-4ad1-874a-680f75d00e4e	 URL: /new-page 	 Method: GET
-2023-11-02	 00:21:59	 170f25ac-5741-4aad-99a5-b7fc18818254	 URL: /new-page 	 Method: GET
-2023-11-02	 00:22:00	 5281a69e-250f-4cfe-ae4e-681596b9339b	 URL: /new-page 	 Method: GET
-2023-11-02	 00:22:04	 cf7e2b6f-c3e5-41ca-81f1-2eb29b40b7b2	 URL: / 	 Method: GET
