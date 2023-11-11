@@ -27,3 +27,11 @@
 20231108	11:41:29	64c650d6-6261-4017-8504-8bb7a08f2ae9	POST	undefined	/auth
 20231108	11:41:32	b797642d-7f3a-439c-a7d2-6e3e592bf3fa	GET	undefined	/logout
 20231108	11:41:41	2693a911-cce8-411a-99d6-c8b2635075e8	GET	undefined	/refresh
+20231108	18:03:24	19c89e32-2527-4bf4-bf84-78d2e27fe103	POST	undefined	/auth
+20231108	18:04:03	c90b876f-b351-49c1-aa93-7101becc2d33	POST	undefined	/auth
+20231108	18:04:13	a6dec0ed-d72b-4bd1-9adf-47cd49da6657	GET	undefined	/refresh
+20231108	18:04:26	496aa176-810c-4fa8-a5d4-114cb36a1a31	DELETE	undefined	/employees
+20231108	18:04:38	57e16021-0e52-494d-8d37-a88d64bc28a9	PUT	undefined	/employees
+20231108	18:04:44	62b5389b-e947-4ddc-8330-c4fe3763a2a4	GET	undefined	/employees/3
+20231108	18:04:47	1098565c-8a72-468e-9ea7-e37098c1b3aa	POST	undefined	/employees
+20231108	18:04:51	a8a36c2e-f94f-4a91-be1a-9cd0f8a7f492	GET	undefined	/employees

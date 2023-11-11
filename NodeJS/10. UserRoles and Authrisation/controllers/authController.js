@@ -19,7 +19,13 @@ const handleLogin = async (req, res) => {
     if (match) {
         // create JWTs
         const accessToken = jwt.sign(
-            { "username": foundUser.username },
+            {
+                "userInfo":{
+                    "username": foundUser.username,
+                    "roles": foundUser.roles
+                
+                }
+            },
             process.env.ACCESS_TOKEN_SECRET,
             { expiresIn: '30s' }
         );
@@ -36,7 +42,7 @@ const handleLogin = async (req, res) => {
             path.join(__dirname, '..', 'model', 'users.json'),
             JSON.stringify(usersDB.users)
         );
-        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000 });
+        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 });
         res.json({ accessToken });
     } else {
         res.sendStatus(401);
