@@ -14,6 +14,7 @@ const logEvents = async (message) => {
     try{
         if(!fs.existsSync(path.join(__dirname, 'logs'))){
             await fsPromises.mkdir(path.join(__dirname, 'logs'));
+            
         }
         // test
         await fsPromises.appendFile(path.join(__dirname, 'logs', `evenLog.txt`), log);
@@ -28,4 +29,4 @@ module.exports = logEvents;
 
 // console.log(formatted);
 // console.log('last line of code');
-// // console.log(uuid());
+// console.log(uuid());
