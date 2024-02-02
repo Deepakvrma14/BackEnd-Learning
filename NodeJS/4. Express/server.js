@@ -3,11 +3,12 @@ const express  = require('express');
 const app = express();
 const path  = require('path');
 
-const PORT = process.env.PORT || 3500;
+const PORT = process.env.PORT || 4500;
 
 app.get(('^/$|index(.html)?'), (req, res) => { // ^/|index(.html)? means that the url can be / or /index.html or /index
     // res.send('Hello World');
     res.sendFile(path.join(__dirname, 'views', 'index.html')); 
+    // res.send('index');
 });
 app.get('/new-page(.html)?', (req, res) => {
     // res.send('Hello World');
@@ -37,7 +38,7 @@ const two = (req, res, next) => {
     next();
 }
 const three = (req, res) =>{
-    res.send('finished');
+    res.send('finish');
     console.log('three');
 }
 app.get('/chain(.html)?', [one, two, three]);

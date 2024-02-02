@@ -20,7 +20,7 @@ const serveFile = async (filePath, contentType, response) => {
         // fdor managuibng json files too 
         const rawData = await fsPromises.readFile(
             filePath,
-            !contentType.includes('image')? 'utf8' : ''
+            contentType.includes('image') ? '' : 'utf-8'
         );   
         const data = contentType === 'application/json' 
             ? JSON.parse(rawData) : rawData;
@@ -33,10 +33,10 @@ const serveFile = async (filePath, contentType, response) => {
             ? 'text/plain' : contentType
         });
 
-response.end(
-    contentType === 'application/json'
-        ? JSON.stringify(data)
-        : data
+            response.end(
+                contentType === 'application/json'
+                    ? JSON.stringify(data)
+                    : data
 );
     } catch (err) {
 
@@ -50,7 +50,7 @@ response.end(
 const PORT = process.env.PORT || 3500;
 
 const server = http.createServer((req, res) =>{
-
+     
     console.log(req.url, req.method);
     myEmitter.emit('Log', `URL: ${req.url} \t Method: ${req.method}`, 'reqLog.txt');
 
@@ -110,12 +110,13 @@ const server = http.createServer((req, res) =>{
     }else{  
         // 404
         // 301 redirect
-        // console.log(path.parse(filePath));
+        console.log(path.parse(filePath));
         switch(path.parse(filePath).base){
-            case 'old.html':
-                res.writeHead(301, {'Location': '/new-page.html'});
-                res.end();  
+            case 'old' : 
+                res.writeHead(301, {'location': '/new-page.html'});
+                res.end();
                 break;
+
 
             case 'www-page.html':
                 res.writeHead(301, {'Location': '/'});
