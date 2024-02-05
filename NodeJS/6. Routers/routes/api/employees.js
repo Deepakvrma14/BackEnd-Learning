@@ -26,10 +26,8 @@ router.route('/')
      
     .delete();
 
-router.route('/:id') //get req hvaing a variable as a parimeter of get request
-    .get((req, res) => {
-        res.json({
-            "id": req.params.id,
-        })
-    });
+router.route('/:id')
+     .get((req, res) =>{
+        res.json({'id': req.params.id});
+     });
 module.exports = router;
