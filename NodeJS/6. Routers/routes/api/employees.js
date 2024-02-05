@@ -26,6 +26,9 @@ router.route('/')
      
     .delete();
 
+  
+
+
 router.route('/:id')
      .get((req, res) =>{
         res.json({'id': req.params.id});

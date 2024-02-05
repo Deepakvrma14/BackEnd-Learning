@@ -221,3 +221,5 @@
 2024-02-05	 11:28:45	 f34bc980-04b5-4b78-8728-695c9d597e54	 GET	 undefined	 /employees/	 /employees/
 2024-02-05	 11:48:26	 287d742b-4f50-448e-b207-1f00b53a403a	 GET	 undefined	 /employees/3	 /employees/3
 2024-02-05	 11:48:29	 b7829cdf-710e-47ad-9efb-a36b95de7458	 GET	 undefined	 /employees	 /employees
+2024-02-05	 19:13:49	 8b1fefc2-22a4-4728-aef8-89f0eb7dfd9c	 GET	 undefined	 /employees	 /employees
+2024-02-05	 19:13:50	 d6e23869-b6a2-46ac-875a-eb4c6f650381	 GET	 undefined	 /employees	 /employees
