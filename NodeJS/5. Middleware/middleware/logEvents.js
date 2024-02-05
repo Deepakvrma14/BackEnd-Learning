@@ -11,6 +11,7 @@ const logEvents = async (message, logName) => {
     const time = `${format(new Date(), 'HH:mm:ss')}`;
     const log = `${date}\t ${time}\t ${uuid()}\t ${message}\n`;
 
+    
     try{
         if(!fs.existsSync(path.join(__dirname,'..' , 'logs'))){
             await fsPromises.mkdir(path.join(__dirname, '..', 'logs'));
@@ -24,6 +25,7 @@ const logEvents = async (message, logName) => {
 
 const logger = (req, res, next) => {
     logEvents(`${req.method}\t ${req.header.origin}\t ${req.url}\t ${req.path}`, 'request.txt');
+    logEvents(``)
     console.log(`${req.method}  ${req.path}`);
     next();
 }

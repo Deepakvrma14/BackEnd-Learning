@@ -9,6 +9,7 @@ const errorHandeler = require('./middleware/errorHandeler');
 const PORT = process.env.PORT || 3500;
 const cors = require('cors');
 
+
 // custom middleware logger
 // app.use((req, res, next) => {
 //     logEvents(`${req.method}\t ${req.header.origin}\t ${req.url}\t ${req.path}`, 'request.txt');
@@ -17,11 +18,13 @@ const cors = require('cors');
 // });
 
 // defining the above in the log events only to make the ocde more cleaner adn importing on yl logger fucntion
+
+
 app.use(logger);
 
 // cross origin resource sharing
 
-const whiteList = ['http://localhost:3500', 'http://localhost:5500', 'http://localhost:4500', 'http://localhost:6500'];
+const whiteList = ['http://localhost:3500', 'http://localhost:5500', 'http://localhost:4500', 'http://localhost:6500', 'https://www.google.com/' ];
 app.use(cors());
 
 const corsOptions = {
@@ -40,8 +43,8 @@ const corsOptions = {
 }
 // build in middleware
 // handle url; encoded data or forms data 
-
-app.use(express.urlencoded({extended: false}));
+// for form data 
+app.use(express.urlencoded({extended:false}));
 
 
 app.use(express.json());
